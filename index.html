@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Paste Komen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="copyTimerBar" class="timer-bar">
+    <span class="timer-label">Tunggu sebelum salin lagi</span>
+    <span id="copyTimerValue" class="timer-value">10</span>
+    <span class="timer-unit">detik</span>
+</div>
+
+<main class="container">
+
+    <header class="header">
+        <div id="dayButtons" class="day-buttons">
+            <button type="button" class="day-btn" data-day="Senin">Senin</button>
+            <button type="button" class="day-btn" data-day="Selasa">Selasa</button>
+            <button type="button" class="day-btn" data-day="Rabu">Rabu</button>
+            <button type="button" class="day-btn" data-day="Kamis">Kamis</button>
+            <button type="button" class="day-btn" data-day="Jumat">Jumat</button>
+            <button type="button" class="day-btn" data-day="Sabtu">Sabtu</button>
+            <button type="button" class="day-btn" data-day="Minggu">Minggu</button>
+        </div>
+        <div class="counter">
+            <span id="totalText">0</span>
+        </div>
+    </header>
+
+    <section class="add-panel">
+        <h2>Input Teks</h2>
+        <form id="addForm" class="add-form">
+            <textarea
+                id="newTextInput"
+                rows="1"
+            ></textarea>
+            <div class="form-actions">
+                <button type="submit" class="add-btn">Tambah Teks</button>
+                <button type="button" id="resetBtn" class="reset-btn">Reset</button>
+            </div>
+        </form>
+    </section>
+
+    <section id="textList" class="text-list"></section>
+
+</main>
+
+<div id="toast" class="toast">
+    Teks disalin dan dihapus
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
